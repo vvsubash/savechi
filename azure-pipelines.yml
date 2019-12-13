@@ -17,5 +17,9 @@ steps:
 
 - script: |
     npm install
-    npm run build
+    npm run generate
+- task: GitHubComment@0
+  inputs:
+    gitHubConnection: 'vvsubash'
+    repositoryName: 'vvsubash/saveechi'
   displayName: 'npm install and generate'
